@@ -6,19 +6,19 @@ This script uses a odd bug / feature in the NTFS file system running on Windows,
 **IMPORTANT**: The data is probably **NOT** secured / hidden. I just don't know how to get access to them without the "password". :smiley:
 
 ## Details
-It will create a file named "Data.txt:\<PASSWORD\>.txt", and for some odd reason the name part after the colon (':') disappears, when the directory is listed. The directory list (DIR) only contains the "Data.txt" file, but apparently both files ("Data.txt:\<PASSWORD\>.txt" and "Data.txt") exists and can contain different data. But deleting the "Data.txt" file will also delete the "Data.txt:\<PASSWORD\>.txt" file (apparently).
+The script will create a file named "Data.txt:\<PASSWORD\>.txt", and for some odd reason the name part after the colon (':') disappears, when the directory is listed. The directory list (DIR) only contains the "Data.txt" file, but apparently both files ("Data.txt:\<PASSWORD\>.txt" and "Data.txt") exists and can contain different data. But deleting the "Data.txt" file will also delete the "Data.txt:\<PASSWORD\>.txt" file (apparently).
 This doesn't seem to cause any damage to the file system.
 
 ## Usage
-### Create
+### Create secret
 1. Create a new directory
-2. Download the "Edit security" file and place it in the created directory
+2. Download the "Edit security.bat" file and place it in the created directory
 3. Run the script / batch file
 4. Enter the password you want to use to "protect" your secret data
 5. Enter your secret data in the Notepad that opens
 6. Close Notepad and save the file in the process
 
-### Edit / view
+### Edit / view secret
 1. Go to the directory you created above
 2. Run the script / batch file
 3. Enter the password you entered above
