@@ -6,9 +6,9 @@ REM     will also delete the hidden data (apparently).
 setlocal
 SET /P PASSWORD="Enter password: "
 if not exist Data.txt (
-    REM Password is not set => Create new file with entered password
+    REM Password is not set => Create a new file with entered password
     echo No secret here > Data.txt
-    echo This is "Secure" data > Data.txt:%PASSWORD%.txt
+    echo This is "secure" data > Data.txt:%PASSWORD%.txt
     notepad Data.txt:%PASSWORD%.txt
     goto END
 )
@@ -24,6 +24,7 @@ if "[%DATA%]"=="[%WRONG%]" (
     goto END
 )
 
+REM Edit or view the "secure" data
 start notepad Data.txt:%PASSWORD%.txt
 
 :END
