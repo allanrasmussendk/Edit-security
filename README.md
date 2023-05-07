@@ -5,7 +5,7 @@ This script uses a odd bug / feature in the NTFS file system running on Windows,
 
 **IMPORTANT**: The data is probably **NOT** secured / hidden. I just don't know how to get access to them without the "password". :smiley:
 
-**UPDATE**: I have apparently just found NTFS Alternate Data Stream (ADS), and the DIR /R command will reveal the (case-insensitive) "password" directly => The script is useless!
+**UPDATE**: I have apparently just found [NTFS Alternate Data Stream (ADS)](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-fscc/c54dec26-1551-4d3a-a0ea-4fa40f848eb3), and the DIR /R command will reveal the (case-insensitive) "password" directly => The script is useless!
 
 ## Details
 The script will create a file named "Data.txt:\<PASSWORD\>.txt", and for some odd reason the name part after the colon (':') disappears, when the directory is listed. The directory list (DIR) only contains the "Data.txt" file, but apparently both files ("Data.txt:\<PASSWORD\>.txt" and "Data.txt") exists and can contain different data. But deleting the "Data.txt" file will also delete the "Data.txt:\<PASSWORD\>.txt" file (apparently).
